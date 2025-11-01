@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { BookOpen, Eye, User, Lock, EyeOff } from "lucide-react";
 
 export default function SuperAdminLogin() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     identifier: "",
     password: "",
@@ -16,7 +18,7 @@ export default function SuperAdminLogin() {
   const handleLogin = () => {
     console.log("Super Admin Login attempt:", formData);
     // Navigate to dashboard page
-    window.location.href = "/dashboard";
+    navigate("/dashboard");
   };
 
   return (
