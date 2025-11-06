@@ -58,6 +58,13 @@ const Sidebar = () => {
       name: "Course Management",
       icon: BookOpen,
       path: "/course-management",
+      children: [
+        {
+          name: "All Courses",
+          path: "/course-management/all-courses",
+          icon: BookOpen, // ✅ Added icon to fix "undefined element" error
+        },
+      ],
     },
     {
       name: "Question Papers",
@@ -213,7 +220,7 @@ const Sidebar = () => {
                       <ul className="flex flex-col space-y-0.5 pb-1 border-l-2 border-orange-200 pl-3">
                         {item.children.map((sub) => {
                           const subActive = activeItem === sub.path;
-                          const SubIcon = sub.icon;
+                          const SubIcon = sub.icon || BookOpen; // ✅ Fallback icon
                           return (
                             <li key={sub.name}>
                               <button
@@ -257,7 +264,7 @@ const Sidebar = () => {
       {/* Overlay for Mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black  bg-opacity-50 z-30 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
