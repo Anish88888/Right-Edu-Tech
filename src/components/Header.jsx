@@ -11,10 +11,12 @@ import {
   FiCreditCard,
   FiLogOut,
 } from "react-icons/fi";
+import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const navigate = useNavigate(); // ✅ Create navigate instance
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -33,7 +35,7 @@ const Header = () => {
         <FiMenu />
       </button>
 
-      {/* Search Bar - Always visible */}
+      {/* Search Bar */}
       <div className="flex-1 max-w-[180px] sm:max-w-[300px] md:max-w-md relative mr-2">
         <input
           type="text"
@@ -55,21 +57,33 @@ const Header = () => {
           <FiGrid />
         </button>
 
-        <button className="relative text-white text-lg p-2 hover:bg-[#414b57] rounded">
+        {/* ✅ Chat Icon (Navigate to Chat Page) */}
+        {/* <button
+          onClick={() => navigate("/chat")}
+          className="relative text-white text-lg p-2 hover:bg-[#414b57] rounded"
+        >
           <FiMessageCircle />
           <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">
             5
           </span>
-        </button>
+        </button> */}
 
-        <button className="relative text-white text-lg p-2 hover:bg-[#414b57] rounded">
+        {/* ✅ Mail Button with Navigation */}
+        <button
+          onClick={() => navigate("/mail")} // 👈 Navigate to Mail Page
+          className="relative text-white text-lg p-2 hover:bg-[#414b57] rounded"
+        >
           <FiMail />
           <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">
             5
           </span>
         </button>
 
-        <button className="relative text-white text-lg p-2 hover:bg-[#414b57] rounded">
+        {/* ✅ Notification Button with Navigation */}
+        <button
+          onClick={() => navigate("/notifications")} // 👈 Navigate to Notification Page
+          className="relative text-white text-lg p-2 hover:bg-[#414b57] rounded"
+        >
           <FiBell />
           <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-3 h-3 rounded-full" />
         </button>

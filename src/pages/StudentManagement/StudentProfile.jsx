@@ -242,8 +242,8 @@ const StudentManagement = () => {
     ];
 
     return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-        <div className="bg-white rounded-lg w-full max-w-5xl max-h-[90vh] overflow-hidden flex flex-col">
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center ml-6 font-bold z-50 p-0">
+        <div className="bg-white rounded-sm w-full max-w-5xl max-h-[90vh] overflow-hidden flex flex-col">
           {/* Header */}
           <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -611,7 +611,7 @@ const StudentManagement = () => {
   };
   return (
     <DashboardLayout>
-      <div className="min-h-screen bg-white p-4">
+      <div className="min-h-screen bg-white ml-6 p-0">
         <div className="max-w-8xl ml-2 mx-auto space-y-4">
           {/* Header + Search + Filters + Buttons (Single Row) */}
           <div className="flex flex-wrap items-center justify-between gap-3 bg-white border border-gray-200 rounded-sm p-4">
@@ -803,7 +803,7 @@ const StudentManagement = () => {
           <div className="bg-white rounded-sm border border-gray-200 shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
-                <thead className="bg-orange-50 text-gray-700">
+                <thead className="bg-orange-600 text-white">
                   <tr>
                     <th className="p-3 text-left font-semibold">Student ID</th>
                     <th className="p-3 text-left font-semibold">Name</th>
@@ -878,23 +878,23 @@ const StudentManagement = () => {
                         </span>
                       </td>
                       <td className="p-3 text-gray-600">{stu.addedBy}</td>
-                      <td className="p-3">
+                      <td className="p-3 font-bold">
                         <div className="flex gap-1">
                           <button
                             onClick={() => setSelectedStudent(stu)}
-                            className="p-2 bg-orange-50 hover:bg-orange-100 rounded-sm border border-orange-200 transition-colors"
+                            className="p-2 hover:bg-orange-100 rounded-sm transition-colors"
                             title="View Profile"
                           >
                             <Eye size={14} className="text-orange-600" />
                           </button>
                           <button
-                            className="p-2 bg-blue-50 hover:bg-blue-100 rounded-sm border border-blue-200 transition-colors"
+                            className="p-2  hover:bg-blue-100 rounded-sm transition-colors"
                             title="Edit Profile"
                           >
                             <Edit size={14} className="text-blue-600" />
                           </button>
                           <button
-                            className="p-2 bg-purple-50 hover:bg-purple-100 rounded-sm border border-purple-200 transition-colors"
+                            className="p-2  hover:bg-purple-100 rounded-sm  transition-colors"
                             title="Assign to Batch"
                           >
                             <GraduationCap

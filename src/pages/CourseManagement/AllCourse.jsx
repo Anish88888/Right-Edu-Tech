@@ -205,7 +205,7 @@ const AdminCoursesTable = () => {
 
   return (
     <DashboardLayout>
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-orange-0 via-amber-50 to-yellow-50 ml-6 p-0">
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-sm shadow-md p-6 border-l-4 border-orange-500">
