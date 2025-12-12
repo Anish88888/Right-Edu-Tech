@@ -9,13 +9,19 @@ import StudentProfile from "./pages/StudentManagement/StudentProfile";
 import StudentEnrolment from "./pages/StudentManagement/StudentEnrollment";
 
 // Exam Management Pages
-import Exam from "./pages/ExamManagement/Exam.jsx";
+import Exam from "./pages/ExamManagement/Exam";
 
 // course Management Pages
 import AllCourse from "./pages/CourseManagement/AllCourse";
+// Question Management Pages
+import QuestionBank from "./pages/QuestionPaperPart/QuestionBank";
 
 //Reward & Awards Pages
 import RewardAwards from "./pages/Reward&Award/RewardAwards";
+// LeadBoard Pages
+import Leaderboard from "./pages/LeadBoardPart/Leaderboard";
+// Analytics Pages
+import Analytics from "./pages/AnalyticsPart/Analytics";
 
 // Transaction Pages
 import Transactions from "./pages/TransactionPart/Transactions";
@@ -47,8 +53,14 @@ function App() {
         <Route path="/exam-management" element={<Exam />} />
         // Course Management Routes
         <Route path="/course-management/all-courses" element={<AllCourse />} />
+        // Question Paper Routes
+        <Route path="/question-papers" element={<QuestionBank />} />
         // Reward & Awards Routes
         <Route path="/rewards-awards" element={<RewardAwards />} />
+        // Leaderboard Routes
+        <Route path="/leader-board" element={<Leaderboard />} />
+        // Analytics Routes
+        <Route path="/analytics" element={<Analytics />} />
         // Transaction Routes
         <Route path="/transaction" element={<Transactions />} />
       </Routes>
